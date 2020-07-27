@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">       
+        <div class="row justify-content-center">
+        <div class="col-md-6">
+            <p class="text-danger text-center ml-4"><%= loginmsg %></p>
+        <div class="card">
+        <header class="card-header">
+            <a href="myModal" data-toggle="modal" data-target="#myModal" class="float-right btn btn-outline-primary mt-1">Sign Up</a>
+            <h4 class="card-title mt-2">Log in</h4>
+        </header>   
+        <article class="card-body">
+        <form action="/login" method="POST">
+            <div class="form-row">
+                <div class="col form-group">
+                    <label>User Name</label>   
+                      <input type="text" class="form-control" name="mail" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <!-- form-group end.// -->
+            <div class="form-row">
+            <div class="col form-group">
+                    <label>password</label>
+                      <input type="password" class="form-control"  name="password" placeholder="Enter your password" required>
+                </div> <!-- form-group end.// -->
+            </div> <!-- form-row end.// -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+            </div> <!-- form-group// -->      
+           </form>
+        </article> <!-- card-body end .// -->
+        </div> <!-- card.// -->
+        </div> <!-- col.//-->
+        
+        </div> <!-- row.//-->
+         <% if(msg) {%>
+            <script>
+                alert("Successfully Registerd ");
+            </script> 
+
+            <% } else { }%>
+
+            <div class="container">
+                <!-- Trigger the modal with a button -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title text-center">Registration Form</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       
+                      </div>
+                      <form action="/reg" method="POST">
+                      <div class="modal-body">
+                        <div class="form-row">
+                            <div class="col form-group">
+                        
+                                <label>Name</label>   
+                                  <input type="text" class="form-control" name="name" placeholder="Enter your Name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>Mail Id</label>   
+                                  <input type="email" class="form-control" name="mail" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>Password</label>   
+                                  <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>Confirm password</label>   
+                                  <input type="password" class="form-control" name="password1" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>phone </label>   
+                                  <input type="tel" class="form-control" name="phone" placeholder="Enter your mobile number" required>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                    </form>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+
+        </div>
+     
+        
+        </div> 
+
+</body>
+</html>
