@@ -1,0 +1,11 @@
+[
+{
+  "sno":1, "acm":"Bachelor of computer science","edu":"university of wollongong in dubai", "duration":"present","grade":"HD"
+},
+{
+ "sno":2, "acm":"Higher secondory certificate","edu":"AL Mawakeb School","duration":"2017-2019","grade":"B+"
+},
+{
+  "sno":3, "amc":"Senior school certificate","edu":"AL Mawakeb School","duration":"2015-2017","grade":"B+"
+}
+]
